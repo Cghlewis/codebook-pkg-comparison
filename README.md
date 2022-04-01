@@ -18,4 +18,4 @@ I started this table as a way to compare existing r packages that assist in Code
 
 If you see that I have mistakenly marked any category for any package, please let me know and I will update!
 
-Table:
+Table: https://cghlewis.github.io/codebook-pkg-comparison/
