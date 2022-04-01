@@ -1,0 +1,52 @@
+---
+title: "Codebook Package Comparison"
+output: html_document
+---
+
+<br>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+
+```
+
+```{r, echo = FALSE}
+
+yes <- emo::ji("check")
+
+no <- emo::ji("x")
+
+tibble::tribble(
+  ~`Variable Metric`, ~`codebook::codebook()`, ~`memisc::codebook()`, ~`sjPlot::view_df()`,
+  ~`labelled::generate_dictionary()`, ~ `dataMaid::makeCodebook()`, ~ `skimr::skim()`, 
+  ~ `pointblank::scan_data()`,
+  "Name", yes, yes, yes, yes, yes, yes, yes,
+  "Label", yes, yes, yes, yes, yes, no, no,
+  "Type", yes, yes, yes, yes, yes, no, no,
+  "Values", yes, yes, yes, yes, no, no, no,
+  "Value labels", yes, yes, yes, yes, yes, no, no,
+  "NA values", no, yes, no, no, no, no, no,
+  "NA labels", no, yes, no, no, no, no, no,
+  "Total valid N", no, no, no, no, no, no, no,
+  "Total missing N", yes, no, yes, no, yes, yes, yes,
+  "N per value", yes, yes, yes, no, no, yes, no,
+  "% per value", no, yes, yes, no, no, no, no,
+  "N per NA value", no, yes, no, no, no, no, no,
+  "% per NA value" , no, yes, no, no, no, no, no,
+  "Range for continuous", yes, yes, yes, no, no, yes, yes,
+  "Mean for continuous", yes, yes, no, no, no, no, yes,
+) %>% gt::gt() %>%
+  gt::cols_align(align = "left", columns = 'Variable Metric') %>%
+  gt::cols_label(`Variable Metric` = "Variable\nMetric", 
+                 `codebook::codebook()` = "codebook::\ncodebook()",
+               `memisc::codebook()` = "memisc::\ncodebook()" , 
+               `sjPlot::view_df()` = "sjPlot::\nview_df()", 
+               `labelled::generate_dictionary()` = "labelled::\ngenerate_dictionary()",
+               `dataMaid::makeCodebook()` = "dataMaid::\nmakeCodebook()",
+               `skimr::skim()` = "skimr::\nskim()", 
+               `pointblank::scan_data()` = "pointblank::\nscan_data()")
+
+
+```
