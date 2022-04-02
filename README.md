@@ -1,4 +1,4 @@
-I started this table as a way to compare existing r packages that assist in codebook creation. The criteria I am looking for include the following variable level metrics (specifically for working with `haven::labelled()` data:
+I started this table as a way to compare existing r packages that assist in codebook creation. The criteria I am looking for include the following variable level metrics (specifically for working with `haven::labelled()` data):
 
 - Name
 - Label
