@@ -21,7 +21,7 @@ If you see that I have mistakenly marked any category for any package, please le
 
 Ultimately I have narrowed the table down to these 5 packages. I removed several packages from this final table because they do not work well with `haven::labelled()` data and/or they do not meet enough of the criteria above.
 
-![](img.png)
+![](https://github.com/Cghlewis/codebook-pkg-comparison/blob/main/img.PNG)
 
 Other helpful resources: 
 
