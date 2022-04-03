@@ -16,6 +16,13 @@ I started this table as a way to compare existing r packages that assist in code
 - Range (if continuous)
 - Mean (if continuous)
 
+All packages I reviewed can be found here: https://cghlewis.github.io/codebook-pkg-comparison/
 If you see that I have mistakenly marked any category for any package, please let me know and I will update!
 
-Table: https://cghlewis.github.io/codebook-pkg-comparison/
+Ultimately I have narrowed the table down to these 5 packages. I removed several packages from this final table because they do not work well with `haven::labelled()` data and/or they do not meet enough of the criteria above.
+
+![](img.png)
+
+Other helpful resources: 
+
+- https://www.researchgate.net/publication/333153930_How_to_Automatically_Document_Data_With_the_codebook_Package_to_Facilitate_Data_Reuse/fulltext/5cde1601299bf14d959f792e/How-to-Automatically-Document-Data-With-the-codebook-Package-to-Facilitate-Data-Reuse.pdf?origin=publication_detail
