@@ -16,7 +16,7 @@ I started this table as a way to compare existing r packages that assist in code
 - Range (if continuous)
 - Mean (if continuous)
 
-All packages I reviewed can be found here: https://cghlewis.github.io/codebook-pkg-comparison/
+A table of all packages I reviewed can be found here: https://cghlewis.github.io/codebook-pkg-comparison/
 
 If you see that I have mistakenly marked any category for any package, please let me know and I will update!
 
