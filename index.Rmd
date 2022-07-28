@@ -22,22 +22,22 @@ tibble::tribble(
   ~`Variable Metric`, ~`codebook::codebook()`, ~`memisc::codebook()`, ~`sjPlot::view_df()`,
   ~`labelled::generate_dictionary()`, ~ `dataMaid::makeCodebook()`, ~ `skimr::skim()`, 
   ~ `pointblank::scan_data()`, ~ `summarytools::dfSummary()`, 
-  ~ `gtsummary::tbl_summary()`,
-  "Name", yes, yes, yes, yes, yes, yes, yes, yes, yes,
-  "Label", yes, yes, yes, yes, yes, no, no, yes, yes,
-  "Type", yes, yes, yes, yes, yes, no, no, yes, no,
-  "Values", yes, yes, yes, yes, no, no, no, yes, yes,
-  "Value labels", yes, yes, yes, yes, yes, no, no, no, no,
-  "NA values", no, yes, no, no, no, no, no, no, yes,
-  "NA labels", no, yes, no, no, no, no, no, no, no,
-  "Total valid N", no, no, no, no, no, no, no, yes, yes,
-  "Total missing N", yes, no, yes, no, yes, yes, yes, yes, yes,
-  "N per value", yes, yes, yes, no, no, yes, no, yes, yes,
-  "% per value", no, yes, yes, no, no, no, no, yes, yes,
-  "N per NA value", no, yes, no, no, no, no, no, no, yes,
-  "% per NA value" , no, yes, no, no, no, no, no, no, yes,
-  "Range for continuous", yes, yes, yes, no, no, yes, yes, yes, yes,
-  "Mean for continuous", yes, yes, no, no, no, no, yes, yes, yes
+  ~ `gtsummary::tbl_summary()`, ~ `codebookr::codebook()`,
+  "Name", yes, yes, yes, yes, yes, yes, yes, yes, yes, yes,
+  "Label", yes, yes, yes, yes, yes, no, no, yes, yes, yes,
+  "Type", yes, yes, yes, yes, yes, no, no, yes, no, yes,
+  "Values", yes, yes, yes, yes, no, no, no, yes, yes, yes,
+  "Value labels", yes, yes, yes, yes, yes, no, no, no, no, yes,
+  "NA values", no, yes, no, no, no, no, no, no, yes, yes,
+  "NA labels", no, yes, no, no, no, no, no, no, no, yes,
+  "Total valid N", no, no, no, no, no, no, no, yes, yes, yes,
+  "Total missing N", yes, no, yes, no, yes, yes, yes, yes, yes, yes,
+  "N per value", yes, yes, yes, no, no, yes, no, yes, yes, yes,
+  "% per value", no, yes, yes, no, no, no, no, yes, yes, yes,
+  "N per NA value", no, yes, no, no, no, no, no, no, yes, yes,
+  "% per NA value" , no, yes, no, no, no, no, no, no, yes, yes,
+  "Range for continuous", yes, yes, yes, no, no, yes, yes, yes, yes, no,
+  "Mean for continuous", yes, yes, no, no, no, no, yes, yes, yes, no
 ) %>% gt::gt() %>%
   gt::cols_align(align = "left", columns = 'Variable Metric') %>%
   gt::cols_label(`Variable Metric` = "Variable\nMetric", 
@@ -49,7 +49,10 @@ tibble::tribble(
                `skimr::skim()` = "skimr::\nskim()", 
                `pointblank::scan_data()` = "pointblank::\nscan_data()", 
                `summarytools::dfSummary()` = "summarytools::\ndfSummary()", 
-               `gtsummary::tbl_summary()` = "gtsummary::\ntbl_summary()")
+               `gtsummary::tbl_summary()` = "gtsummary::\ntbl_summary()",
+              `codebookr::codebook()` =
+"codebookr::\ncodebook()", 
+               )
 
 ```
 
@@ -62,20 +65,20 @@ no <- emo::ji("x")
 
 tibble::tribble(
   ~`Variable Metric`, ~`codebook::codebook()`, ~`memisc::codebook()`, ~`sjPlot::view_df()`,
-  ~`labelled::generate_dictionary()`, ~ `dataMaid::makeCodebook()`,
+  ~`codebookr::codebook()`, ~ `dataMaid::makeCodebook()`,
   "Name", yes, yes, yes, yes, yes,
   "Label", yes, yes, yes, yes, yes, 
   "Type", yes, yes, yes, yes, yes,
   "Values", yes, yes, yes, yes, no,
   "Value labels", yes, yes, yes, yes, yes,
-  "NA values", no, yes, no, no, no,
-  "NA labels", no, yes, no, no, no,
-  "Total valid N", no, no, no, no, no,
-  "Total missing N", yes, no, yes, no, yes,
-  "N per value", yes, yes, yes, no, no,
-  "% per value", no, yes, yes, no, no,
-  "N per NA value", no, yes, no, no, no,
-  "% per NA value" , no, yes, no, no, no,
+  "NA values", no, yes, no, yes, no,
+  "NA labels", no, yes, no, yes, no,
+  "Total valid N", no, no, no, yes, no,
+  "Total missing N", yes, no, yes, yes, yes,
+  "N per value", yes, yes, yes, yes, no,
+  "% per value", no, yes, yes, yes, no,
+  "N per NA value", no, yes, no, yes, no,
+  "% per NA value" , no, yes, no, yes, no,
   "Range for continuous", yes, yes, yes, no, no,
   "Mean for continuous", yes, yes, no, no, no,
 ) %>% gt::gt() %>%
@@ -84,7 +87,7 @@ tibble::tribble(
                  `codebook::codebook()` = "codebook::\ncodebook()",
                `memisc::codebook()` = "memisc::\ncodebook()" , 
                `sjPlot::view_df()` = "sjPlot::\nview_df()", 
-               `labelled::generate_dictionary()` = "labelled::\ngenerate_dictionary()",
+               `codebookr::codebook()` = "codebookr::\ncodebook()",
                `dataMaid::makeCodebook()` = "dataMaid::\nmakeCodebook()")
 
 ```
