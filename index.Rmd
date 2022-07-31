@@ -38,7 +38,9 @@ tibble::tribble(
   "% per NA value" , no, yes, no, no, no, no, no, no, yes, yes,
   "Range for continuous", yes, yes, yes, no, no, yes, yes, yes, yes, no,
   "Mean for continuous", yes, yes, no, no, no, no, yes, yes, yes, no
-) %>% gt::gt() %>%
+) %>% 
+  relocate(`codebookr::codebook()`, .before = `codebook::codebook()`) %>%
+  gt::gt() %>%
   gt::cols_align(align = "left", columns = 'Variable Metric') %>%
   gt::cols_label(`Variable Metric` = "Variable\nMetric", 
                  `codebook::codebook()` = "codebook::\ncodebook()",
@@ -81,7 +83,9 @@ tibble::tribble(
   "% per NA value" , no, yes, no, yes, no,
   "Range for continuous", yes, yes, yes, no, no,
   "Mean for continuous", yes, yes, no, no, no,
-) %>% gt::gt() %>%
+) %>% 
+  relocate(`codebookr::codebook()`, .before = `codebook::codebook()`) %>%
+  gt::gt() %>%
   gt::cols_align(align = "left", columns = 'Variable Metric') %>%
   gt::cols_label(`Variable Metric` = "Variable\nMetric", 
                  `codebook::codebook()` = "codebook::\ncodebook()",
