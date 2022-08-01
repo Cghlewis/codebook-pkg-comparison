@@ -5,14 +5,14 @@ I started this table as a way to compare existing r packages that assist in code
 - Type
 - Values (if categorical)
 - Value labels (if categorical)
-- NA values
-- NA labels
+- NA values (Missing values - ex: -99 and -98)
+- NA labels (Missing value labels - ex: -99 = No response and -98 = Unclear response)
 - Total valid N
 - Total missing N
 - N per value (if categorical)
 - % per value (if categorical)
-- N per NA value
-- % per NA value
+- N per NA value (Missing value)
+- % per NA value (Missing value)
 - Range (if continuous)
 - Mean (if continuous)
 
