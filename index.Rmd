@@ -20,14 +20,14 @@ no <- emo::ji("x")
 
 tibble::tribble(
   ~`Variable Metric`, ~`codebook::codebook()`, ~`memisc::codebook()`, ~`sjPlot::view_df()`,
-  ~`labelled::generate_dictionary()`, ~ `dataMaid::makeCodebook()`, ~ `skimr::skim()`, 
+  ~`labelled::generate_dictionary()`, ~ `dataReporter::makeDataReport()`, ~ `skimr::skim()`, 
   ~ `pointblank::scan_data()`, ~ `summarytools::dfSummary()`, 
   ~ `gtsummary::tbl_summary()`, ~ `codebookr::codebook()`,
   "Name", yes, yes, yes, yes, yes, yes, yes, yes, yes, yes,
   "Label", yes, yes, yes, yes, yes, no, no, yes, yes, yes,
   "Type", yes, yes, yes, yes, yes, no, no, yes, no, yes,
   "Values", yes, yes, yes, yes, no, no, no, yes, yes, yes,
-  "Value labels", yes, yes, yes, yes, yes, no, no, no, no, yes,
+  "Value labels", yes, yes, yes, yes, no, no, no, no, no, yes,
   "NA values", no, yes, yes, no, no, no, no, no, yes, yes,
   "NA labels", no, yes, yes, no, no, no, no, no, no, yes,
   "Total valid N", no, no, no, no, no, no, no, yes, yes, yes,
@@ -36,7 +36,7 @@ tibble::tribble(
   "% per value", no, yes, yes, no, no, no, no, yes, yes, yes,
   "N per NA value", no, yes, yes, no, no, no, no, no, yes, yes,
   "% per NA value" , no, yes, yes, no, no, no, no, no, yes, yes,
-  "Range for continuous", yes, yes, yes, no, no, yes, yes, yes, yes, yes,
+  "Range for continuous", yes, yes, yes, no, yes, yes, yes, yes, yes, yes,
   "Mean for continuous", yes, yes, no, no, no, no, yes, yes, yes, yes
 ) %>% 
   relocate(`codebookr::codebook()`, .before = `codebook::codebook()`) %>%
@@ -47,7 +47,7 @@ tibble::tribble(
                `memisc::codebook()` = "memisc::\ncodebook()" , 
                `sjPlot::view_df()` = "sjPlot::\nview_df()", 
                `labelled::generate_dictionary()` = "labelled::\ngenerate_dictionary()",
-               `dataMaid::makeCodebook()` = "dataMaid::\nmakeCodebook()",
+               `dataReporter::makeDataReport()` = "dataReporter::\nmakeDataReport()",
                `skimr::skim()` = "skimr::\nskim()", 
                `pointblank::scan_data()` = "pointblank::\nscan_data()", 
                `summarytools::dfSummary()` = "summarytools::\ndfSummary()", 
@@ -59,7 +59,7 @@ tibble::tribble(
 ```
 
 
-```{r, eval = FALSE, include=FALSE, echo = FALSE}
+```{r,eval = FALSE, include=FALSE, echo = FALSE}
 
 yes <- emo::ji("check")
 
@@ -67,12 +67,12 @@ no <- emo::ji("x")
 
 tibble::tribble(
   ~`Variable Metric`, ~`codebook::codebook()`, ~`memisc::codebook()`, ~`sjPlot::view_df()`,
-  ~`codebookr::codebook()`, ~ `dataMaid::makeCodebook()`,
+  ~`codebookr::codebook()`, ~ `dataReporter::makeDataReport()`,
   "Name", yes, yes, yes, yes, yes,
   "Label", yes, yes, yes, yes, yes, 
   "Type", yes, yes, yes, yes, yes,
   "Values", yes, yes, yes, yes, no,
-  "Value labels", yes, yes, yes, yes, yes,
+  "Value labels", yes, yes, yes, yes, no,
   "NA values", no, yes, yes, yes, no,
   "NA labels", no, yes, yes, yes, no,
   "Total valid N", no, no, no, yes, no,
@@ -81,7 +81,7 @@ tibble::tribble(
   "% per value", no, yes, yes, yes, no,
   "N per NA value", no, yes, yes, yes, no,
   "% per NA value" , no, yes, yes, yes, no,
-  "Range for continuous", yes, yes, yes, yes, no,
+  "Range for continuous", yes, yes, yes, yes, yes,
   "Mean for continuous", yes, yes, no, yes, no,
 ) %>% 
   relocate(`codebookr::codebook()`, .before = `codebook::codebook()`) %>%
@@ -92,6 +92,6 @@ tibble::tribble(
                `memisc::codebook()` = "memisc::\ncodebook()" , 
                `sjPlot::view_df()` = "sjPlot::\nview_df()", 
                `codebookr::codebook()` = "codebookr::\ncodebook()",
-               `dataMaid::makeCodebook()` = "dataMaid::\nmakeCodebook()")
+               `dataReporter::makeDataReport()` = "dataReporter::\nmakeDataReport()")
 
 ```
