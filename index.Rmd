@@ -36,8 +36,8 @@ tibble::tribble(
   "% per value", no, yes, yes, no, no, no, no, yes, yes, yes,
   "N per NA value", no, yes, no, no, no, no, no, no, yes, yes,
   "% per NA value" , no, yes, no, no, no, no, no, no, yes, yes,
-  "Range for continuous", yes, yes, yes, no, no, yes, yes, yes, yes, no,
-  "Mean for continuous", yes, yes, no, no, no, no, yes, yes, yes, no
+  "Range for continuous", yes, yes, yes, no, no, yes, yes, yes, yes, yes,
+  "Mean for continuous", yes, yes, no, no, no, no, yes, yes, yes, yes
 ) %>% 
   relocate(`codebookr::codebook()`, .before = `codebook::codebook()`) %>%
   gt::gt() %>%
@@ -81,8 +81,8 @@ tibble::tribble(
   "% per value", no, yes, yes, yes, no,
   "N per NA value", no, yes, no, yes, no,
   "% per NA value" , no, yes, no, yes, no,
-  "Range for continuous", yes, yes, yes, no, no,
-  "Mean for continuous", yes, yes, no, no, no,
+  "Range for continuous", yes, yes, yes, yes, no,
+  "Mean for continuous", yes, yes, no, yes, no,
 ) %>% 
   relocate(`codebookr::codebook()`, .before = `codebook::codebook()`) %>%
   gt::gt() %>%
