@@ -11,8 +11,8 @@ I started this table as a way to compare existing r packages that assist in code
 - Total missing N
 - N per value (if categorical)
 - % per value (if categorical)
-- N per NA value (Missing value)
-- % per NA value (Missing value)
+- N per NA value (User-defined labelled missing value)
+- % per NA value (User-defined labelled missing value)
 - Range (if continuous)
 - Mean (if continuous)
 
@@ -21,6 +21,8 @@ A table of all packages I reviewed can be found here: https://cghlewis.github.io
 If you see that I have mistakenly marked any category for any package, please let me know and I will update!
 
 Ultimately I have narrowed the table down to these 5 packages. I removed several packages from this final table because they do not work well with `haven::labelled()` data and/or they do not meet enough of the criteria above.
+
+*Note: `dataMaid` has been renamed to `dataReporter`. You can read more about it [here](https://github.com/ekstroem/dataMaid)
 
 ![](https://github.com/Cghlewis/codebook-pkg-comparison/blob/main/img.PNG)
 
