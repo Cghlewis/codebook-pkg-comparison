@@ -58,8 +58,11 @@ tibble::tribble(
 
 ```
 
+<br>
 
-```{r,eval = FALSE, include=FALSE, echo = FALSE}
+*Note: `dataMaid` has been renamed to `dataReporter`. You can read more about it [here](https://github.com/ekstroem/dataMaid).
+
+```{r, eval = FALSE, include=FALSE, echo = FALSE}
 
 yes <- emo::ji("check")
 
@@ -67,22 +70,22 @@ no <- emo::ji("x")
 
 tibble::tribble(
   ~`Variable Metric`, ~`codebook::codebook()`, ~`memisc::codebook()`, ~`sjPlot::view_df()`,
-  ~`codebookr::codebook()`, ~ `dataReporter::makeDataReport()`,
-  "Name", yes, yes, yes, yes, yes,
-  "Label", yes, yes, yes, yes, yes, 
-  "Type", yes, yes, yes, yes, yes,
-  "Values", yes, yes, yes, yes, no,
-  "Value labels", yes, yes, yes, yes, no,
-  "NA values", no, yes, yes, yes, no,
-  "NA labels", no, yes, yes, yes, no,
-  "Total valid N", no, no, no, yes, no,
-  "Total missing N", yes, no, yes, yes, yes,
-  "N per value", yes, yes, yes, yes, no,
-  "% per value", no, yes, yes, yes, no,
-  "N per NA value", no, yes, yes, yes, no,
-  "% per NA value" , no, yes, yes, yes, no,
-  "Range for continuous", yes, yes, yes, yes, yes,
-  "Mean for continuous", yes, yes, no, yes, no,
+  ~`codebookr::codebook()`,
+  "Name", yes, yes, yes, yes,
+  "Label", yes, yes, yes, yes,
+  "Type", yes, yes, yes, yes,
+  "Values", yes, yes, yes, yes,
+  "Value labels", yes, yes, yes, yes,
+  "NA values", no, yes, yes, yes,
+  "NA labels", no, yes, yes, yes,
+  "Total valid N", no, no, no, yes,
+  "Total missing N", yes, no, yes, yes,
+  "N per value", yes, yes, yes, yes,
+  "% per value", no, yes, yes, yes,
+  "N per NA value", no, yes, yes, yes,
+  "% per NA value" , no, yes, yes, yes,
+  "Range for continuous", yes, yes, yes, yes,
+  "Mean for continuous", yes, yes, no, yes
 ) %>% 
   relocate(`codebookr::codebook()`, .before = `codebook::codebook()`) %>%
   gt::gt() %>%
@@ -91,7 +94,6 @@ tibble::tribble(
                  `codebook::codebook()` = "codebook::\ncodebook()",
                `memisc::codebook()` = "memisc::\ncodebook()" , 
                `sjPlot::view_df()` = "sjPlot::\nview_df()", 
-               `codebookr::codebook()` = "codebookr::\ncodebook()",
-               `dataReporter::makeDataReport()` = "dataReporter::\nmakeDataReport()")
+               `codebookr::codebook()` = "codebookr::\ncodebook()")
 
 ```
