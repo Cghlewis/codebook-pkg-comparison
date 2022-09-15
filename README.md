@@ -1,3 +1,5 @@
+Note: I am giving a lightning talk on A Comparison of Packages to Generate Codebooks in R to R-Ladies NYC on Tuesday Sept. 20th. You can view slides and materials for that talk here: ![](https://github.com/Cghlewis/rladies-nyc-codebook-comparison)
+
 I started this table as a way to compare existing r packages that assist in codebook creation. The criteria I am looking for include the following variable level metrics (specifically for working with `haven::labelled()` data):
 
 - Name
