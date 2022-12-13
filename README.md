@@ -19,10 +19,11 @@ I started this table as a way to compare existing r packages that assist in code
 - Mean (if continuous)
 
 A table of all packages I reviewed can be found here: https://cghlewis.github.io/codebook-pkg-comparison/
+There were other packages that I reviewed but I did not include them in the table if they give errors when working with `haven::labelled()` data (for example both `Hmisc::describe()` and `dataxray::make_xray()` give errors when data include value labels.
 
 If you see that I have mistakenly marked any category for any package, please let me know and I will update!
 
-Ultimately I have narrowed the table down to these 4 packages. I removed several packages from this final table because they do not work well with `haven::labelled()` data and/or they do not meet enough of the criteria above.
+Ultimately I have narrowed the table down to these 4 packages. These 4 packages work well with `haven::labelled()` data and they met an acceptable number of the above criteria.
 
 ![](https://github.com/Cghlewis/codebook-pkg-comparison/blob/main/img.PNG)
 
