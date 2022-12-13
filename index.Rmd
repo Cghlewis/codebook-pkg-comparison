@@ -7,17 +7,12 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-
 library(tidyverse)
-
 ```
 
 ```{r, echo = FALSE}
-
 yes <- emo::ji("check")
-
 no <- emo::ji("x")
-
 tibble::tribble(
   ~`Variable Metric`, ~`codebook::codebook()`, ~`memisc::codebook()`, ~`sjPlot::view_df()`,
   ~`labelled::generate_dictionary()`, ~ `dataReporter::makeDataReport()`,~`Variable Metric2`, 
@@ -29,13 +24,13 @@ tibble::tribble(
   "Type", yes, yes, yes, yes, yes, "Type", no, no, yes, no, yes, yes,
   "Values", yes, yes, yes, yes, no, "Values", no, no, yes, yes, yes, yes,
   "Value labels", yes, yes, yes, yes, no, "Value labels", no, no, no, no, yes, yes,
-  "NA values", yes, yes, yes, no, no, "NA values", no, no, no, yes, yes, yes, 
-  "NA labels", yes, yes, yes, no, no, "NA labels", no, no, no, no, yes, yes,
+  "NA values", yes, yes, yes, no, no, "NA values", no, no, no, yes, yes, no, 
+  "NA labels", yes, yes, yes, no, no, "NA labels", no, no, no, no, yes, no,
   "Total valid N", no, no, no, no, no, "Total valid N", no, no, yes, yes, no, no,
   "Total missing N", yes, no, yes, no, yes, "Total missing N", yes, yes, yes, yes, no, yes,
   "N per value", yes, yes, yes, no, no, "N per value", yes, no, yes, yes, yes, yes,
-  "% per value", no, yes, yes, no, no, "% per value", no, no, yes, yes, yes, no,
-  "N per NA value", no, yes, yes, no, no, "N per NA value", no, no, no, yes, yes, yes,
+  "% per value", no, yes, yes, no, no, "% per value", no, no, yes, yes, yes, yes,
+  "N per NA value", no, yes, yes, no, no, "N per NA value", no, no, no, yes, yes, no,
   "% per NA value" , no, yes, yes, no, no, "% per NA value", no, no, no, yes, yes, no,
   "Range for continuous", yes, yes, yes, no, yes, "Range for continuous", yes, yes, yes, yes, yes, yes,
   "Mean for continuous", yes, yes, no, no, no, "Mean for continuous", no, yes, yes, yes, yes, no
@@ -57,20 +52,15 @@ tibble::tribble(
               `codebookr::codebook()` = "codebookr::\ncodebook()", 
               `datawizard::data_codebook()` = "datawizard::\ndata_codebook()"
                )
-
 ```
 
 <br>
 
 *Note: `dataMaid` has been renamed to `dataReporter`. You can read more about it [here](https://github.com/ekstroem/dataMaid).  
-\*Note: I am currently working through a few errors I have run into with the `datawizard::data_codebook()` function. I will update as I learn more.
 
 ```{r, eval = FALSE, include=FALSE, echo = FALSE}
-
 yes <- emo::ji("check")
-
 no <- emo::ji("x")
-
 tibble::tribble(
   ~`Variable Metric`, ~`codebook::codebook()`, ~`memisc::codebook()`, ~`sjPlot::view_df()`,
   ~`codebookr::codebook()`,
@@ -98,5 +88,4 @@ tibble::tribble(
                `memisc::codebook()` = "memisc::\ncodebook()" , 
                `sjPlot::view_df()` = "sjPlot::\nview_df()", 
                `codebookr::codebook()` = "codebookr::\ncodebook()")
-
 ```
