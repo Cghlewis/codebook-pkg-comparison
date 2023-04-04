@@ -19,21 +19,22 @@ tibble::tribble(
   ~ `skimr::skim()`, 
   ~ `pointblank::scan_data()`, ~ `summarytools::dfSummary()`, 
   ~ `gtsummary::tbl_summary()`, ~ `codebookr::codebook()`, ~ `datawizard::data_codebook()`,
-  "Name", yes, yes, yes, yes, yes, "Name", yes, yes, yes, yes, yes, yes,
-  "Label", yes, yes, yes, yes, yes, "Label", no, no, yes, yes, yes, yes,
-  "Type", yes, yes, yes, yes, yes, "Type", no, no, yes, no, yes, yes,
-  "Values", yes, yes, yes, yes, no, "Values", no, no, yes, yes, yes, yes,
-  "Value labels", yes, yes, yes, yes, no, "Value labels", no, no, no, no, yes, yes,
-  "NA values", yes, yes, yes, no, no, "NA values", no, no, no, yes, yes, no, 
-  "NA labels", yes, yes, yes, no, no, "NA labels", no, no, no, no, yes, no,
-  "Total valid N", no, no, no, no, no, "Total valid N", no, no, yes, yes, no, no,
-  "Total missing N", yes, no, yes, no, yes, "Total missing N", yes, yes, yes, yes, no, yes,
-  "N per value", yes, yes, yes, no, no, "N per value", yes, no, yes, yes, yes, yes,
-  "% per value", no, yes, yes, no, no, "% per value", no, no, yes, yes, yes, yes,
-  "N per NA value", no, yes, yes, no, no, "N per NA value", no, no, no, yes, yes, no,
-  "% per NA value" , no, yes, yes, no, no, "% per NA value", no, no, no, yes, yes, no,
-  "Range for continuous", yes, yes, yes, no, yes, "Range for continuous", yes, yes, yes, yes, yes, yes,
-  "Mean for continuous", yes, yes, no, no, no, "Mean for continuous", no, yes, yes, yes, yes, no
+  ~`vt::vt()`,
+  "Name", yes, yes, yes, yes, yes, "Name", yes, yes, yes, yes, yes, yes, yes,
+  "Label", yes, yes, yes, yes, yes, "Label", no, no, yes, yes, yes, yes, yes,
+  "Type", yes, yes, yes, yes, yes, "Type", no, no, yes, no, yes, yes, yes,
+  "Values", yes, yes, yes, yes, no, "Values", no, no, yes, yes, yes, yes, yes,
+  "Value labels", yes, yes, yes, yes, no, "Value labels", no, no, no, no, yes, yes, yes,
+  "NA values", yes, yes, yes, no, no, "NA values", no, no, no, yes, yes, no, yes,
+  "NA labels", yes, yes, yes, no, no, "NA labels", no, no, no, no, yes, no, yes,
+  "Total valid N", no, no, no, no, no, "Total valid N", no, no, yes, yes, no, no, no,
+  "Total missing N", yes, no, yes, no, yes, "Total missing N", yes, yes, yes, yes, no, yes, no,
+  "N per value", yes, yes, yes, no, no, "N per value", yes, no, yes, yes, yes, yes, no,
+  "% per value", no, yes, yes, no, no, "% per value", no, no, yes, yes, yes, yes, no,
+  "N per NA value", no, yes, yes, no, no, "N per NA value", no, no, no, yes, yes, no, no,
+  "% per NA value" , no, yes, yes, no, no, "% per NA value", no, no, no, yes, yes, no, no,
+  "Range for continuous", yes, yes, yes, no, yes, "Range for continuous", yes, yes, yes, yes, yes, yes, yes,
+  "Mean for continuous", yes, yes, no, no, no, "Mean for continuous", no, yes, yes, yes, yes, no, yes
 ) %>% 
   relocate(`codebookr::codebook()`, .before = `codebook::codebook()`) %>%
   gt::gt() %>%
@@ -50,7 +51,8 @@ tibble::tribble(
                `summarytools::dfSummary()` = "summarytools::\ndfSummary()", 
                `gtsummary::tbl_summary()` = "gtsummary::\ntbl_summary()",
               `codebookr::codebook()` = "codebookr::\ncodebook()", 
-              `datawizard::data_codebook()` = "datawizard::\ndata_codebook()"
+              `datawizard::data_codebook()` = "datawizard::\ndata_codebook()",
+              `vt::vt()` = "vt::\nvt()"
                )
 ```
 
