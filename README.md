@@ -10,7 +10,7 @@ I started this table as a way to compare existing r packages that assist in code
 - NA values (Missing values: for example -99 and -98)
 - NA labels (Missing value labels: for example -99 = No response, -98 = Unclear response)
 - Total valid N
-- Total missing N
+- Total missing N (must recognize user-define missing values)
 - N per value (if categorical)
 - % per value (if categorical)
 - N per NA value (User-defined labelled missing value)
